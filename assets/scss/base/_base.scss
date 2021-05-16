@@ -1,0 +1,129 @@
+html {
+  // Assuming default font-size is 16px
+  // So 62.5% == 10px
+  font-size: 62.5%;
+
+  // Making sure that the page takes the whole height
+  height: 100%;
+  // Smooth scrolling links
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+
+  @include on-event {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Basic styles for lists
+ */
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  &::before {
+    content: none;
+  }
+}
+
+/**
+ * Basic styles for headings
+ */
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Basic styles for paragraph
+ */
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Change the white to any color
+ */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px $color-white inset;
+}
+
+/**
+ * Basic styles for select
+ */
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/**
+ * Basic styles for number input
+ */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Remove outline from inputs on focus
+ */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/**
+ * Remove dotted outline border on Firefox
+ */
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 $color-black;
+}
+
+/**
+ * Remove box shadows from input controls on iOS
+ */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+textarea {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

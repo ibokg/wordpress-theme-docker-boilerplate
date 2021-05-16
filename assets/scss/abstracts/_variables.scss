@@ -1,0 +1,17 @@
+/// Container's maximum width
+/// @type Length
+$max-width: 116.8rem !default;
+
+/// Breakpoints
+/// @type Length
+$bp-small: 22.5em;
+$bp-small-lg: 33.75em;
+$bp-medium: 48em;
+$bp-large: 62em;
+$bp-large-extra: 75em;
+
+//color variables
+/// Base colors
+/// @type Color
+$color-white: #fff !default;
+$color-black: #000 !default;

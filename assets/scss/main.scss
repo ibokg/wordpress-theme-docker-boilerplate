@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import 
+  '~sanitize.css';
+
+// 3. Base stuff
+@import
+  'base/animations',
+  'base/base',
+  'base/helpers',
+  'base/typography';
+
+// 4. Layout-related sections
+@import
+  'layout/l-footer',
+  'layout/l-header',
+  'layout/l-page';
+
+// 5. Components
+
+// 6. Page-specific styles

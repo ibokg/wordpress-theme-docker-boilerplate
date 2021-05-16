@@ -1,0 +1,65 @@
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.h-container {
+  max-width: $max-width; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 1.6rem; /* 3 */
+  padding-right: 1.6rem; /* 3 */
+  width: 100%; /* 1 */
+}
+
+.h-hidden {
+  display: none;
+}
+
+.h-hidden-desktop {
+  @include respond($bp-large) {
+    display: none;
+  }
+}
+
+.h-show-only-desktop {
+  display: none;
+
+  @include respond($bp-large) {
+    display: block;
+  }
+}
+
+.h-overflow-hidden {
+  overflow: hidden;
+
+  &--mobile {
+    @include respond($bp-large) {
+      overflow: auto !important;
+    }
+  }
+}
+
+.h-w-100 {
+  width: 100%;
+}
+
+.h-img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.h-text-nowrap {
+  white-space: nowrap;
+}
+
+.h-text-center {
+  text-align: center;
+}
+
+.h-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

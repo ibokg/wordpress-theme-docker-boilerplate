@@ -1,0 +1,48 @@
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// MEDIA QUERY MANAGER
+/// $breakpoint argument choices:
+/// - phone
+/// - tab-port
+/// - tab-land
+/// - big-desktop
+
+@mixin respond($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin line-clamp($lines-count, $line-height) {
+  max-height: $line-height * $lines-count;
+  overflow: hidden;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines-count;
+  -webkit-box-orient: vertical;
+}
